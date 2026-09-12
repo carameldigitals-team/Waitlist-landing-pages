@@ -3,10 +3,12 @@ import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface HeroProps {
   statusBadge?: string;
+  onOpenQuickCheck?: () => void;
 }
 
 export function Hero({
   statusBadge = 'Cohort 01 Doors Open • First 50 Entries Lock Founding Rates',
+  onOpenQuickCheck,
 }: HeroProps) {
   return (
     <section
@@ -122,6 +124,17 @@ export function Hero({
             Free. First access + a personalised next step — before this opens to
             everyone else.
           </p>
+
+          {onOpenQuickCheck && (
+            <button
+              type="button"
+              onClick={onOpenQuickCheck}
+              className="mt-3 inline-flex items-center justify-center gap-1.5 text-[12.5px] font-semibold text-[#E8DCC8] hover:text-[#E8C766] transition-colors py-1 cursor-pointer"
+            >
+              <span>⚡ Preview sample question (15-sec check)</span>
+              <span className="text-[#D4A828]">→</span>
+            </button>
+          )}
 
           {statusBadge && (
             <div
