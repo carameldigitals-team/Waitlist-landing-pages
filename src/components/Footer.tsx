@@ -21,6 +21,21 @@ export function Footer() {
       className="bg-[#2A1810] text-[#F5EEE1] text-center pt-14 pb-16 px-6 border-t border-[rgba(245,238,225,0.08)]"
     >
       <div className="max-w-2xl mx-auto flex flex-col items-center">
+        {/* Beyond Salary Movement Brand Badge */}
+        <div className="flex items-center gap-2.5 mb-3.5 opacity-90">
+          <div className="w-7 h-7 rounded-lg overflow-hidden border border-[#D4A828]/40 shadow-sm bg-[#180D07]">
+            <img
+              src="/beyond_salary_logo.jpg"
+              alt="Beyond Salary Movement Emblem"
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+          <span className="font-bold text-[13px] tracking-wider text-[#E8C766] uppercase">
+            Beyond Salary Movement
+          </span>
+        </div>
+
         {/* Pacifico Tagline */}
         <div
           id="footer-tagline"

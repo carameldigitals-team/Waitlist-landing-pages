@@ -53,3 +53,54 @@ body {
 .animate-rise-in {
   animation: riseIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
+
+/* Premium Logo Levitation & Sheen Animations */
+@keyframes goldFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes goldAuraGlow {
+  0%, 100% {
+    box-shadow: 0 0 28px -4px rgba(212, 168, 40, 0.35), 0 0 60px -8px rgba(232, 199, 102, 0.2);
+    border-color: rgba(232, 199, 102, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 44px 4px rgba(212, 168, 40, 0.55), 0 0 85px 0px rgba(232, 199, 102, 0.32);
+    border-color: rgba(232, 199, 102, 0.75);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-gold-float {
+  animation: goldFloat 4.8s ease-in-out infinite;
+}
+
+.animate-aura-glow {
+  animation: goldAuraGlow 4s ease-in-out infinite;
+}
+
+.animate-shimmer-sweep {
+  animation: shimmerSweep 3.8s ease-in-out infinite;
+}
